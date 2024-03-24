@@ -15,14 +15,11 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-
-
 app.use(cors({
-  
-  origin:["https://alumuni-track-client.vercel.app/"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  origin:["https://alumuni-track-client.vercel.app"],
+  credentials: true,
 }));
+
 
 app.use(cookieParser());
 app.use(express.json());
